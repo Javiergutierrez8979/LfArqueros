@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Anta", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+
+
+
+}
+
+@mixin flex-colum{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+@mixin img-cards{
+    width: 100%;
+    margin: 1%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+@mixin cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 5%;
+    padding: 1%;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    box-shadow: 5px 5px 15px gray;
+    background-color: #4297ef;
+
+
+}
+
+@mixin card-texto{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 2%;
+
+
+}
+
+
+
+.contacto{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #4297ef;
+    color: beige;
+    padding: 1%;
+}
+
+
+
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1em;
+
+}
+
+.div-logo{
+    display: flex;
+    flex-direction: row;
+}
+
+.logo{
+    width: 15%;
+}
+
+
+main{
+
+    @include flex-colum();
+
+    .intro{
+        @include card-texto();
+        margin: 2%;
+        align-items: center;
+    
+    }
+
+    .img-uno{
+        width: 100%;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+        box-shadow: 5px 5px 15px gray;
+        filter: blur(3px);
+        -webkit-filter: blur(3px);
+
+        
+}
+
+    .card-uno{
+
+        @include cards();
+
+        .texto-card-uno{
+            @include card-texto();
+            
+        }
+
+        .img-conocenos{
+            @include img-cards();
+                }
+
+    }
+
+    .card-dos{
+
+        @include flex-colum();
+        width: 80%;
+    margin: 5%;
+    padding: 1%;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    box-shadow: 5px 5px 15px gray;
+        background-color: #4297ef;
+
+
+
+        .texto-card-dos{
+            @include card-texto();
+        }
+
+        
+}
+
+.maps{
+    display: block;
+    width: 50em;
+}
+
+
+
+
+.card{
+    margin: 2em;
+
+
+    img{
+        width: 100%;
+    }
+
+}
+
+.card-body{
+    background-color: #4297ef;
+}
+
+.banner{
+    display: flex;
+    flex-direction: row;
+}
+
+.video{
+    @include flex-colum();
+    margin: 3em;
+}
+
+.formulario{
+    padding: 1em;
+    background-color: #4297ef;
+}
+
+
+
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1%;
+    margin: 5em;
+
+    .icono-footer{
+        width: 2em;
+    }
+
+}
+
+@media only screen and (min-width: 300px) and (max-width: 1024px){
+
+
+    header{
+        .div-logo{
+            .logo{
+                width: 15%;
+                height: 10%;
+            }
+        }
+    }
+
+
+    main{
+
+        
+        
+
+            .div-logo{
+                width: 1%;
+            }
+    
+
+        
+
+
+        .card-uno{
+            @include flex-colum();
+            background-color: #4297ef;
+
+            .img-conocenos{
+                display: block;
+                padding: 5%;
+            }
+        }
+
+        .card-dos{
+            @include flex-colum();
+            background-color: #4297ef;
+
+            .maps{
+                display: block;
+                width: 100%;
+                padding: 5%;
+            }
+
+        }
+
+        .banner{
+            @include flex-colum();
+            margin: 5%;
+            padding: 5%;
+
+            .img-banner{
+                width: 100%;
+            }
+        }
+
+        .video{
+            @include flex-colum();
+
+            iframe{
+                margin: 5%;
+                width: 100%;
+            }
+        }
+
+
+    
+        
+    }
+
+
+
+
+}
+
+
+
+
